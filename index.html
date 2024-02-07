@@ -1,123 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Kartka walentynkowa</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background {
+    background-image: url('tlo.jpg'); /* zastąp 'tlo.jpg' odpowiednim obrazkiem */
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* aby tło było pod resztą zawartości */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 50px;
+    background-color: #ffffff; /* białe tło */
+    border-radius: 20px; /* zaokrąglony border */
+    border: 5px solid #ff66cc; /* różowy obramowanie */
+    max-width: 600px; /* maksymalna szerokość */
+    max-height: 80%; /* maksymalna wysokość */
+    margin: auto; /* wyśrodkowanie flexem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* wyśrodkowanie w pionie */
+}
+
+h1 {
+    font-size: 72px; /* większy rozmiar czcionki */
+    color: #ff66cc; /* różowy kolor tekstu */
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ff4d4d; /* czerwony kolor przycisku */
+    color: #ffffff; /* biały kolor tekstu na przycisku */
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background-color: #ff6666; /* jasniejszy odcień czerwieni po najechaniu myszką */
+}
+
+button:disabled {
+    opacity: 1; /* przycisk wyłączony zachowuje pełną widoczność */
+    cursor: not-allowed; /* nie można kliknąć wyłączonego przycisku */
+}
+    </style>
 </head>
+
 <body>
-    
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Fees</a></li>
-            <li><a href="#">Users</a></li>
-            <li><a href="#">Summary</a></li>
-        </ul>
-    </nav>
-    
-    <div class="breadcrumbs">
-        <a href="#">Home</a>/ <a href="#">Kategorie</a>/ <a href="#">Spotify</a>
+    <div class="background">
+        <div class="content">
+            <h1>Wesołych Walentynek!</h1>
+            <img src="obrazek.png" alt="Obrazek">
+            <div class="buttons">
+                <button class="yes">Tak</button>
+                <button class="no">Nie</button>
+            </div>
+        </div>
     </div>
-
-    <div class="container">
-        <h1>Spotify</h1>
-        <ul>
-            <li>
-                <div class="fee">
-                    <p>Id: <strong>125</strong></p>
-                    <p>Data: <strong>25-01-2024</strong></p>
-                    <p>Kwota: <strong>39.99</strong> zł</p>
-                    <button>X</button>
-                </div>
-            </li>
-            <li>
-                <div class="fee">
-                    <p>Id: <strong>124</strong></p>
-                    <p>Data: <strong>25-12-2023</strong></p>
-                    <p>Kwota: <strong>39.99</strong> zł</p>
-                    <button>X</button>
-                </div>
-            </li>
-            <li>
-                <div class="fee">
-                    <p>Id: <strong>123</strong></p>
-                    <p>Data: <strong>25-11-2023</strong></p>
-                    <p>Kwota: <strong>39.99</strong> zł</p>
-                    <button>X</button>
-                </div>
-            </li>
-        </ul>
-
-        <form action="#">
-            <h1>Add new fee</h1>
-            <label for="kategoria">Wybierz kategorię:</label>
-            <select id="kategoria" name="kategoria">
-                <option value="spotify">Spotify</option>
-                <option value="disney+">Disney+</option>
-            </select>
-            <label for="data_opla">Podaj datę opłaty:</label>
-            <input type="date" id="data_opla" name="data_opla"/>
-            <label for="price">Standardowa kwota?</label>
-            <input type="checkbox" />
-            <label for="price">Standardowa kwota?</label>
-            <input type="number">
-            <button type="submit" onclick="showAlert()">Submit</button>
-        </form>
-    </div>
-
-    <div class="container">
-        <h1>Spotify</h1>
-        <ul>
-            <li>
-                <div class="fee">
-                    <p>Imię: <strong>John Doe</strong></p>
-                    <p>Kwota zaległa: <strong>50.00 zł</strong></p>
-                    <input type="text" placeholder="Wpisz kwotę" />
-                    <button class="accept-button">Akceptuj</button>
-                </div>
-            </li>
-            <li>
-                <div class="fee">
-                    <p>Imię: <strong>Jane Doe</strong></p>
-                    <p>Kwota zaległa: <strong>30.00 zł</strong></p>
-                    <input type="text" placeholder="Wpisz kwotę" />
-                    <button class="accept-button">Akceptuj</button>
-                </div>
-            </li>
-            <!-- Dodaj więcej opłat według potrzeb -->
-        </ul>
-    </div>
-
-    <div class="container">
-        <h1>Disney+</h1>
-        <ul>
-            <li>
-                <div class="fee">
-                    <p>Imię: <strong>John Doe</strong></p>
-                    <p>Kwota zaległa: <strong>50.00 zł</strong></p>
-                    <input type="text" placeholder="Wpisz kwotę" />
-                    <button class="accept-button">Akceptuj</button>
-                </div>
-            </li>
-            <li>
-                <div class="fee">
-                    <p>Imię: <strong>Jane Doe</strong></p>
-                    <p>Kwota zaległa: <strong>30.00 zł</strong></p>
-                    <input type="text" placeholder="Wpisz kwotę" />
-                    <button class="accept-button">Akceptuj</button>
-                </div>
-            </li>
-            <!-- Dodaj więcej opłat według potrzeb -->
-        </ul>
-    </div>
-
-    <script>
-        function showAlert() {
-            alert('Dodano');
-        }
-    </script>
-    
 </body>
+
 </html>
