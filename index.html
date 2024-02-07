@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Fees</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Summary</a></li>
+        </ul>
+    </nav>
+    
+    <div class="breadcrumbs">
+        <a href="#">Home</a>/ <a href="#">Kategorie</a>/ <a href="#">Spotify</a>
+    </div>
+
+    <div class="container">
+        <h1>Spotify</h1>
+        <ul>
+            <li>
+                <div class="fee">
+                    <p>Id: <strong>125</strong></p>
+                    <p>Data: <strong>25-01-2024</strong></p>
+                    <p>Kwota: <strong>39.99</strong> zł</p>
+                    <button>X</button>
+                </div>
+            </li>
+            <li>
+                <div class="fee">
+                    <p>Id: <strong>124</strong></p>
+                    <p>Data: <strong>25-12-2023</strong></p>
+                    <p>Kwota: <strong>39.99</strong> zł</p>
+                    <button>X</button>
+                </div>
+            </li>
+            <li>
+                <div class="fee">
+                    <p>Id: <strong>123</strong></p>
+                    <p>Data: <strong>25-11-2023</strong></p>
+                    <p>Kwota: <strong>39.99</strong> zł</p>
+                    <button>X</button>
+                </div>
+            </li>
+        </ul>
+
+        <form action="#">
+            <h1>Add new fee</h1>
+            <label for="kategoria">Wybierz kategorię:</label>
+            <select id="kategoria" name="kategoria">
+                <option value="spotify">Spotify</option>
+                <option value="disney+">Disney+</option>
+            </select>
+            <label for="data_opla">Podaj datę opłaty:</label>
+            <input type="date" id="data_opla" name="data_opla"/>
+            <label for="price">Standardowa kwota?</label>
+            <input type="checkbox" />
+            <label for="price">Standardowa kwota?</label>
+            <input type="number">
+            <button type="submit" onclick="showAlert()">Submit</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>Spotify</h1>
+        <ul>
+            <li>
+                <div class="fee">
+                    <p>Imię: <strong>John Doe</strong></p>
+                    <p>Kwota zaległa: <strong>50.00 zł</strong></p>
+                    <input type="text" placeholder="Wpisz kwotę" />
+                    <button class="accept-button">Akceptuj</button>
+                </div>
+            </li>
+            <li>
+                <div class="fee">
+                    <p>Imię: <strong>Jane Doe</strong></p>
+                    <p>Kwota zaległa: <strong>30.00 zł</strong></p>
+                    <input type="text" placeholder="Wpisz kwotę" />
+                    <button class="accept-button">Akceptuj</button>
+                </div>
+            </li>
+            <!-- Dodaj więcej opłat według potrzeb -->
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Disney+</h1>
+        <ul>
+            <li>
+                <div class="fee">
+                    <p>Imię: <strong>John Doe</strong></p>
+                    <p>Kwota zaległa: <strong>50.00 zł</strong></p>
+                    <input type="text" placeholder="Wpisz kwotę" />
+                    <button class="accept-button">Akceptuj</button>
+                </div>
+            </li>
+            <li>
+                <div class="fee">
+                    <p>Imię: <strong>Jane Doe</strong></p>
+                    <p>Kwota zaległa: <strong>30.00 zł</strong></p>
+                    <input type="text" placeholder="Wpisz kwotę" />
+                    <button class="accept-button">Akceptuj</button>
+                </div>
+            </li>
+            <!-- Dodaj więcej opłat według potrzeb -->
+        </ul>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert('Dodano');
+        }
+    </script>
+    
+</body>
+</html>
