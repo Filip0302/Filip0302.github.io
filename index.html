@@ -1,91 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>		
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name = "format-detection" content = "telephone=no">
+        
+    <title>Walentynki &#128150</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartka walentynkowa</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
-    <style>
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
+	<!-- Styles -->
+    <link rel="stylesheet" type="text/css"  href="./main.css" />
 
-.background {
-    background-image: url('tlo.jpg'); /* zastąp 'tlo.jpg' odpowiednim obrazkiem */
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* aby tło było pod resztą zawartości */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.content {
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    padding: 50px;
-    background-color: #ffffff; /* białe tło */
-    border-radius: 20px; /* zaokrąglony border */
-    border: 5px solid #ff66cc; /* różowy obramowanie */
-    max-width: 600px; /* maksymalna szerokość */
-    max-height: 80%; /* maksymalna wysokość */
-    margin: auto; /* wyśrodkowanie flexem */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* wyśrodkowanie w pionie */
-}
-
-h1 {
-    font-size: 72px; /* większy rozmiar czcionki */
-    color: #ff66cc; /* różowy kolor tekstu */
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-button {
-    background-color: #ff4d4d; /* czerwony kolor przycisku */
-    color: #ffffff; /* biały kolor tekstu na przycisku */
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    outline: none;
-}
-
-button:hover {
-    background-color: #ff6666; /* jasniejszy odcień czerwieni po najechaniu myszką */
-}
-
-button:disabled {
-    opacity: 1; /* przycisk wyłączony zachowuje pełną widoczność */
-    cursor: not-allowed; /* nie można kliknąć wyłączonego przycisku */
-}
-    </style>
 </head>
-
 <body>
-    <div class="background">
-        <div class="content">
-            <h1>Wesołych Walentynek!</h1>
-            <img src="obrazek.png" alt="Obrazek">
-            <div class="buttons">
-                <button class="yes">Tak</button>
-                <button class="no">Nie</button>
-            </div>
-        </div>
+  <div class="container">
+    <h2>Question</h2>
+    <div class="btn-container">
+      <button id='runaway-btn' class="no">Nie! &#128528;</button>
+      <button class="yes">Yes! &#128525</button>
     </div>
-</body>
-
+  </div>
+ <!-- Scripts -->
+ <script src="./main.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
+</body>  
 </html>
