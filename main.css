@@ -44,6 +44,7 @@ button {
 .no {
     background-color: #ff4081;
     color: #fff;
+    position: absolute;
 }
 
 /* Media query dla szerszych ekranów */
